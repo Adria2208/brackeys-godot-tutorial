@@ -221,7 +221,7 @@ zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
 [node name="Platform" parent="." unique_id=1777350946 instance=ExtResource("3_lnu2h")]
-position = Vector2(6, -31)
+position = Vector2(-27, -28)
 
 [node name="Platform2" parent="." unique_id=2008436045 instance=ExtResource("3_lnu2h")]
 position = Vector2(343, 53)
