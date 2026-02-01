@@ -31,12 +31,8 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("run")
 	else:
 			animated_sprite.play("jump")
-
 	
 	# Apply movement
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	velocity.x = Input.get_axis("move_left", "move_right") * SPEED
 
 	move_and_slide()
