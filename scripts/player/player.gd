@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine: Node = $StateMachine
+@onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+@onready var double_jump_sound: AudioStreamPlayer2D = $DoubleJumpSound
 
 var has_double_jumped = false
 

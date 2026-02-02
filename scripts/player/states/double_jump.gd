@@ -14,6 +14,7 @@ func enter() -> void:
 	super()
 	parent.velocity.y = 0
 	parent.velocity.y += -jump_force
+	parent.double_jump_sound.play()
 	
 func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta
