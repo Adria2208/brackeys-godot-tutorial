@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine: Node = $StateMachine
 
+var has_double_jumped = false
+
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the playerto the states,
 	# that way they can move and react accordingly
