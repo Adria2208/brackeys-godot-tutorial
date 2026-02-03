@@ -27,6 +27,6 @@ func process_physics(delta: float) -> State:
 func process_input(event: InputEvent) -> State:
 	if Input.is_action_just_pressed("jump") and !parent.has_double_jumped:
 		parent.has_double_jumped = true
-		# parent.velocity.y = 0
+		parent.velocity.y = 0
 		return double_jump
 	return null
