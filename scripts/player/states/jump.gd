@@ -44,4 +44,3 @@ func process_input(event: InputEvent) -> State:
 		# parent.velocity.y = 0
 		return double_jump
 	return null
-	
