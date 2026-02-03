@@ -14,7 +14,7 @@ func enter() -> void:
 	super()
 	parent.velocity.y = 0
 	parent.velocity.y += -jump_force
-	parent.double_jump_sound.play()
+	AudioManager.create_2d_audio_at_location(parent.position, SoundEffect.SOUND_EFFECT_TYPE.PLAYER_JUMP_DOUBLE)
 	
 func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta

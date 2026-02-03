@@ -6,3 +6,6 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	game_manager.add_point()
 	animation_player.play("pickup")
+	
+func play_coin_sound() -> void:
+	AudioManager.create_2d_audio_at_location(self.position, SoundEffect.SOUND_EFFECT_TYPE.PICKUP_COIN)
