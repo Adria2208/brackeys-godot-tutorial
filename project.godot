@@ -27,6 +27,7 @@ buses/default_bus_layout="uid://dhgcsx13geh8s"
 
 Music="*uid://d2p5iwthtitxx"
 AudioManager="*uid://dul0iudncv3iw"
+GlobalSignals="*uid://d0bngj0yk1vcr"
 
 [input]
 

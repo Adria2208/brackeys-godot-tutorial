@@ -6,6 +6,8 @@ var fall_state: State
 var idle_state: State
 @export
 var jump_state: State
+@export
+var death_state: State
 
 func process_input(event: InputEvent) -> State:
 	if Input.is_action_just_pressed("jump") and parent.is_on_floor():
@@ -17,6 +19,9 @@ func process_physics(delta: float) -> State:
 	
 	var movement = Input.get_axis("move_left", "move_right") * move_speed
 	
+	if !parent.is_alive:
+		return death_state
+		
 	if movement == 0:
 		return idle_state
 	
