@@ -3,4 +3,5 @@ My first Godot project following and expanding upon [Brackey's YouTube tutorial 
 # Extra features:
 - Finite State Machine for controlling the player.
 	- Double Jump State.
+ 	- Improved Death State.
 - AudioManager for handling sound effect logic.
