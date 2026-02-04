@@ -2,6 +2,9 @@ extends Area2D
 
 @export 
 var debug_id: String
+@export
+var damage: int = 1
+
 @onready var timer: Timer = $Timer # Variable that automatically finds the node using $Path
 
 func _ready() -> void:
@@ -11,7 +14,7 @@ func _ready() -> void:
 func _on_body_entered(body: Player) -> void:
 	#print("You died!")
 	Engine.time_scale = 0.5 # Slow down game speed.
-	body.damage(1, debug_id)
+	body.damage(damage, debug_id)
 	# GlobalSignals.emit_signal("player_death")
 	# body.get_node("CollisionShape2D").queue_free() # Remove that node.
 	timer.start()
