@@ -19,7 +19,7 @@ func process_physics(delta: float) -> State:
 	
 	var movement = Input.get_axis("move_left", "move_right") * move_speed
 	
-	if !parent.is_alive:
+	if parent.hp <= 0:
 		return death_state
 		
 	if movement == 0:

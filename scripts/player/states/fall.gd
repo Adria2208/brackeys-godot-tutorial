@@ -12,7 +12,7 @@ var death_state: State
 func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta
 
-	if !parent.is_alive:
+	if parent.hp <= 0:
 		return death_state
 
 	var movement = Input.get_axis('move_left', 'move_right') * move_speed

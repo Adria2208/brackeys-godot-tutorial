@@ -22,7 +22,7 @@ func enter() -> void:
 func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta
 	
-	if !parent.is_alive:
+	if parent.hp <= 0:
 		return death_state
 	
 	if parent.velocity.y > 0:
