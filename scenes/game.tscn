@@ -379,6 +379,8 @@ position_smoothing_enabled = true
 
 [node name="Killzone" parent="." unique_id=672910705 instance=ExtResource("3_iywne")]
 position = Vector2(7, -7)
+debug_id = "out_of_bounds"
+damage = 9999
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1284901060]
 position = Vector2(272, 201)

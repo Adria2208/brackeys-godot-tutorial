@@ -53,6 +53,7 @@ frame = 2
 frame_progress = 0.31332967
 
 [node name="Killzone" parent="AnimatedSprite2D" unique_id=672910705 instance=ExtResource("2_n6pvg")]
+debug_id = "slime_enemy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone" unique_id=1902541672]
 position = Vector2(0, 5)

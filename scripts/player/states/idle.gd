@@ -6,6 +6,8 @@ var fall_state: State
 var jump_state: State
 @export
 var move_state: State
+@export
+var death_state: State
 
 func enter() -> void:
 	super()
@@ -21,6 +23,9 @@ func process_input(event: InputEvent) -> State:
 func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta
 	parent.move_and_slide()
+	
+	if parent.hp <= 0:
+		return death_state
 	
 	if !parent.is_on_floor():
 		return fall_state

@@ -6,9 +6,14 @@ var idle_state: State
 var move_state: State
 @export
 var double_jump: State
+@export
+var death_state: State
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += gravity * delta
+
+	if parent.hp <= 0:
+		return death_state
 
 	var movement = Input.get_axis('move_left', 'move_right') * move_speed
 	
