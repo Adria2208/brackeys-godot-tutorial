@@ -2,11 +2,16 @@
 
 [ext_resource type="Script" uid="uid://b5pu27gbtxfbv" path="res://scripts/main_menu.gd" id="1_0ykhv"]
 [ext_resource type="FontFile" uid="uid://0q2tpaghfflr" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://bwjxsnknpikm5" path="res://assets/sprites/2x2.png" id="3_l72w3"]
 [ext_resource type="Shader" uid="uid://cc8tdg3ums7vp" path="res://shaders/scroll.gdshader" id="3_ow34m"]
-[ext_resource type="Texture2D" uid="uid://bgekpli5il4am" path="res://assets/sprites/2x2_blank.png" id="4_l72w3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_826wr"]
 shader = ExtResource("3_ow34m")
+shader_parameter/speed = 1.0
+shader_parameter/red = 0.0
+shader_parameter/green = 0.8
+shader_parameter/blue = 1.0
+shader_parameter/alpha = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqorp"]
 bg_color = Color(1, 1, 1, 1)
@@ -46,13 +51,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -830.0
-offset_top = -830.0
-offset_right = 830.0
-offset_bottom = 830.0
+offset_left = -807.0
+offset_top = -731.0
+offset_right = 853.0
+offset_bottom = 929.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_l72w3")
+texture = ExtResource("3_l72w3")
 stretch_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=478093025]
