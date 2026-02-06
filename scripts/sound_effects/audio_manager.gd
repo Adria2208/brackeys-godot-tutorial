@@ -24,6 +24,7 @@ func create_2d_audio_at_location(location: Vector2, type: SoundEffect.SOUND_EFFE
 			var new_2D_audio: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 			add_child(new_2D_audio)
 			new_2D_audio.position = location
+			new_2D_audio.bus = "SFX"
 			new_2D_audio.stream = sound_effect.sound_effect
 			new_2D_audio.volume_db = sound_effect.volume
 			new_2D_audio.pitch_scale = sound_effect.pitch_scale
